@@ -1,19 +1,25 @@
 package conta;
 
 import java.util.Scanner;
-
-import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class Menu {
 	public static void main(String[] args) {
-		
-		 
-		Conta c1 = new Conta(1, 123, 1, "Julia", 10000.0f);
-		c1.visualizar();
-		c1.sacar(12000.0f);
-		c1. visualizar();
-		c1.depositar(5000.0f);
-		c1. visualizar();
+
+		ContaCorrente contaCorrente = new ContaCorrente(1, 123, 1, "Julia", 10000.0f, 0);
+		contaCorrente.visualizar();
+		contaCorrente.sacar(12000.0f);
+		contaCorrente.visualizar();
+		contaCorrente.depositar(5000.0f);
+		contaCorrente.visualizar();
+
+		ContaPoupanca contaPoupanca = new ContaPoupanca(12, 1213, 1, "Vicente", 1000.0f, 43);
+		contaPoupanca.visualizar();
+		contaPoupanca.sacar(12000.0f);
+		contaPoupanca.visualizar();
+		contaPoupanca.depositar(5000.0f);
+		contaPoupanca.visualizar();
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -81,6 +87,7 @@ public class Menu {
 				System.out.println("\nOpção Inválida!\n");
 				break;
 			}
+			scanner.close();
 		}
 	}
 
@@ -91,4 +98,5 @@ public class Menu {
 		System.out.println("github.com/JuliaPinheiro");
 		System.out.println("*********************************************************");
 	}
+
 }
