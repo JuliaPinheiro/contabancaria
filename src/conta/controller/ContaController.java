@@ -7,15 +7,9 @@ import conta.repository.ContaRepository;
 
 public class ContaController implements ContaRepository {
 
-	/**
-	 * Collection listaContas contendo Objetos do tipo Conta
-	 */
 	private ArrayList<Conta> listaContas = new ArrayList<Conta>();
 	int numero = 0;
 
-	/**
-	 * Procurar Conta por numero
-	 */
 	@Override
 	public void procurarPorNumero(int numero) {
 		var conta = buscarNaCollection(numero);
